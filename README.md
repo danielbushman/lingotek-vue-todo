@@ -38,7 +38,7 @@ yarn build --report
 * [x] Vue app structure
 * [x] Webpack
 * [x] Bulma, Sass
-* [ ] Vue layout
+* [x] Vue layout
 * [ ] Storybook for Vue
 * [ ] story: layout
 * [ ] task entry component
