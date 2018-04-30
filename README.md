@@ -37,7 +37,7 @@ yarn build --report
 * [x] editorconfig, eslint
 * [x] Vue app structure
 * [x] Webpack
-* [ ] Bulma, Sass
+* [x] Bulma, Sass
 * [ ] Vue layout
 * [ ] Storybook for Vue
 * [ ] story: layout
