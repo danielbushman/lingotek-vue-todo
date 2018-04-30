@@ -13,3 +13,6 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+
+# use this for any files you want ignored, such as experiment._ignored.js
+*._ignored.*
