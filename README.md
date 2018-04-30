@@ -42,10 +42,12 @@ yarn build --report
 * [x] Webpack
 * [x] Bulma, Sass
 * [x] Vue layout
-* [ ] Storybook for Vue
-* [ ] story: layout
-* [ ] task entry component
-* [ ] story: task entry
+* [x] Storybook for Vue
+* [x] story: layout
+* [x] task entry component
+* [x] story: task entry
+* [ ] task component
+* [ ] story: task
 * [ ] task removal component
 * [ ] story: task removal
 * [ ] task complete component

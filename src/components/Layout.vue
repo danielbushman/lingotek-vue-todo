@@ -9,14 +9,17 @@
       </div>
     </div>
     <div class="container">
-      List
+      <enter-task/>
     </div>
   </section>
 </template>
 
 <script>
+import EnterTask from './EnterTask';
+
 export default {
   name: 'Layout',
+  components: { EnterTask },
   data() {
     return {
       title: 'todo',
