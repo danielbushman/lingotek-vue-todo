@@ -1,6 +1,24 @@
 <template>
   <div id="app">
-    <layout/>
+    <section class="section">
+      <div class="container">
+        <add-task @addTask="addTask"/>
+        <task-progress
+          v-if="count > 0"
+          :completed-count="completedCount"
+          :count="count"
+        />
+        <div class="panel">
+          <task
+            v-for="task in tasks"
+            :key="task.id"
+            :task="task"
+            @toggle="toggle"
+            @remove="remove"
+          />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -9,14 +27,27 @@ import fontawesome from '@fortawesome/fontawesome';
 import solid from '@fortawesome/fontawesome-free-solid';
 import faTimesCircle from '@fortawesome/fontawesome-free-solid/faTimesCircle';
 
-import Layout from './components/Layout';
-
 fontawesome.library.add(solid, faTimesCircle);
+
+import { mapState, mapGetters, mapMutations } from 'vuex';
+import AddTask from './components/AddTask';
+import Task from './components/Task';
+import TaskProgress from './components/TaskProgress';
+import { TOGGLE_TASK, ADD_TASK, REMOVE_TASK } from './store';
 
 export default {
   name: 'App',
-  components: {
-    Layout,
+  components: { AddTask, Task, TaskProgress },
+  computed: {
+    ...mapState(['tasks']),
+    ...mapGetters(['count', 'completedCount']),
+  },
+  methods: {
+    ...mapMutations({
+      toggle: TOGGLE_TASK,
+      remove: REMOVE_TASK,
+      addTask: ADD_TASK,
+    }),
   },
 };
 </script>
