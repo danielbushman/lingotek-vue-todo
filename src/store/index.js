@@ -19,7 +19,7 @@ const store = new Vuex.Store({
   },
   mutations: {
     [ADD_TASK]: (state, name) => {
-      const id = btoa(Math.random() * Date.now());
+      const id = btoa(Math.random() * Date.now()).slice(0, 7);
       state.tasks.push({ id, name, completed: false });
     },
     [REMOVE_TASK]: (state, task) => {
