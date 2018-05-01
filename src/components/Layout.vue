@@ -19,24 +19,25 @@
 </template>
 
 <script>
+import { mapState, mapGetters, mapMutations } from 'vuex';
 import AddTask from './AddTask';
 import Task from './Task';
 import TaskProgress from './TaskProgress';
+import { TOGGLE_TASK, ADD_TASK, REMOVE_TASK } from '../store';
 
 export default {
   name: 'Layout',
   components: { AddTask, Task, TaskProgress },
-  data() {
-    return {
-      tasks: [
-        {
-          name: 'task A',
-        },
-        {
-          name: 'task B',
-        },
-      ],
-    };
+  computed: {
+    ...mapState(['tasks']),
+    ...mapGetters(['count', 'completedCount']),
+  },
+  methods: {
+    ...mapMutations({
+      toggle: TOGGLE_TASK,
+      remove: REMOVE_TASK,
+      addTask: ADD_TASK,
+    }),
   },
 };
 </script>
