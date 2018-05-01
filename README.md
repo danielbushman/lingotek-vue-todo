@@ -45,7 +45,7 @@ yarn build --report
 * [x] task complete component
 * [x] graph component
 * [x] base Vuex store
-* [ ] tests for in-memory tasks store
+* [x] tests for in-memory tasks store
 * [x] tasks store
 
 ### Stretch goals
