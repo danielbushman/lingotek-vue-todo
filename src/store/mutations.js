@@ -2,6 +2,7 @@ import { ADD_TASK, REMOVE_TASK, TOGGLE_TASK } from './mutation-types';
 
 export default {
   [ADD_TASK]: (state, name) => {
+    if (name.trim() === '') return;
     const id = btoa(Math.random() * Date.now()).slice(0, 7);
     state.tasks.push({ id, name, completed: false });
   },
