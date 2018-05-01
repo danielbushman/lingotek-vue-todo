@@ -31,6 +31,12 @@ describe('mutations', () => {
     expect(store.state.tasks[1].completed).toBeFalsy();
   });
 
+  test('ADD_TASK with not add an empty string as a task', () => {
+    const startingCount = store.state.tasks.length;
+    store.commit(ADD_TASK, '     ');
+    expect(store.state.tasks.length).toEqual(startingCount);
+  });
+
   test('REMOVE_TASK removes the provided task', () => {
     expect(store.state.tasks).toContainEqual(testTask);
     store.commit(REMOVE_TASK, testTask);
