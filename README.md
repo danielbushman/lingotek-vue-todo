@@ -26,10 +26,10 @@ yarn build --report
 
 ### Asked for
 
-* [ ] Allows you to add a task
-* [ ] Allows you to remove a task
-* [ ] Allows you to mark a task complete
-* [ ] Has some kind of graph comparing the percentage of completed tasks to the percentage of remaining tasks.
+* [x] Allows you to add a task
+* [x] Allows you to remove a task
+* [x] Allows you to mark a task complete
+* [x] Has some kind of graph comparing the percentage of completed tasks to the percentage of remaining tasks.
 
 ### Granular list
 
@@ -44,9 +44,9 @@ yarn build --report
 * [x] task removal component
 * [x] task complete component
 * [x] graph component
-* [ ] base Vuex store
+* [x] base Vuex store
 * [ ] tests for in-memory tasks store
-* [ ] tasks store
+* [x] tasks store
 
 #### Proposed features
 
