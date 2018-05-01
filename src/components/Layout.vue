@@ -9,9 +9,11 @@
       />
       <nav class="panel">
         <task
-          v-for="(task, i) in tasks"
-          :key="i"
+          v-for="task in tasks"
+          :key="task.id"
           :task="task"
+          @toggle="toggle"
+          @remove="remove"
         />
       </nav>
     </div>
