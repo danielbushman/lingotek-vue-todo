@@ -4,7 +4,7 @@
       <input
         class="input is-medium"
         type="text"
-        placeholder="Enter a task name"
+        placeholder="Add a task to do"
         @keyup.enter="addTask"
       >
     </p>
