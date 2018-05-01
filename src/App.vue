@@ -31,7 +31,7 @@ import { mapState, mapGetters, mapMutations } from 'vuex';
 import AddTask from './components/AddTask';
 import Task from './components/Task';
 import TaskProgress from './components/TaskProgress';
-import { TOGGLE_TASK, ADD_TASK, REMOVE_TASK } from './store';
+import { TOGGLE_TASK, ADD_TASK, REMOVE_TASK } from './store/mutation-types';
 
 fontawesome.library.add(solid, faTimesCircle);
 
