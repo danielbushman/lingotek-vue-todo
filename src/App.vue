@@ -27,13 +27,13 @@ import fontawesome from '@fortawesome/fontawesome';
 import solid from '@fortawesome/fontawesome-free-solid';
 import faTimesCircle from '@fortawesome/fontawesome-free-solid/faTimesCircle';
 
-fontawesome.library.add(solid, faTimesCircle);
-
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import AddTask from './components/AddTask';
 import Task from './components/Task';
 import TaskProgress from './components/TaskProgress';
 import { TOGGLE_TASK, ADD_TASK, REMOVE_TASK } from './store';
+
+fontawesome.library.add(solid, faTimesCircle);
 
 export default {
   name: 'App',
