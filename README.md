@@ -40,10 +40,10 @@ yarn build --report
 * [x] Bulma, Sass
 * [x] Vue layout
 * [x] task entry component
-* [ ] task component
-* [ ] task removal component
-* [ ] task complete component
-* [ ] graph component
+* [x] task component
+* [x] task removal component
+* [x] task complete component
+* [x] graph component
 * [ ] base Vuex store
 * [ ] tests for in-memory tasks store
 * [ ] tasks store
