@@ -1,8 +1,8 @@
 <template>
   <section class="section">
     <div class="container">
-      <add-task/>
       <task-progress/>
+      <add-task @addTask="addTask"/>
       <nav class="panel">
         <task
           v-for="(task, i) in tasks"

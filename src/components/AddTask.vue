@@ -2,6 +2,7 @@
   <div class="field has-addons">
     <p class="control is-expanded">
       <input
+        v-model="inputValue"
         class="input is-medium"
         type="text"
         placeholder="Add a task to do"
@@ -22,8 +23,18 @@
 <script>
 export default {
   name: 'AddTask',
+  data() {
+    return {
+      inputValue: '',
+    };
+  },
   methods: {
-    addTask() {},
+    addTask() {
+      if (this.inputValue !== '') {
+        this.$emit('addTask', this.inputValue);
+        this.inputValue = '';
+      }
+    },
   },
 };
 </script>
