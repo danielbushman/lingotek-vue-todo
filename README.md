@@ -48,6 +48,12 @@ yarn build --report
 * [ ] tests for in-memory tasks store
 * [x] tasks store
 
+### Stretch goals
+
+* [ ] send done to bottom of list and grey out
+* [ ] storybook
+* [ ] i18n
+
 #### Proposed features
 
 * [ ] hide/show completed tests
