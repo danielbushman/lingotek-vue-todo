@@ -1,8 +1,12 @@
 <template>
   <section class="section">
     <div class="container">
-      <task-progress/>
       <add-task @addTask="addTask"/>
+      <task-progress
+        v-if="count > 0"
+        :completed-count="completedCount"
+        :count="count"
+      />
       <nav class="panel">
         <task
           v-for="(task, i) in tasks"
