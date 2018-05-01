@@ -26,9 +26,9 @@ const store = new Vuex.Store({
       state.tasks.splice(state.tasks.indexOf(task), 1);
     },
     [TOGGLE_TASK]: (state, task) => {
-      const completedTask = { ...task };
-      completedTask.completed = !task.completed;
-      state.tasks.splice(state.tasks.indexOf(task), 1, completedTask);
+      const toggledTask = { ...task };
+      toggledTask.completed = !task.completed;
+      state.tasks.splice(state.tasks.indexOf(task), 1, toggledTask);
     },
   },
 });
