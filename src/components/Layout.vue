@@ -1,52 +1,27 @@
 <template>
   <section class="section">
     <div class="container">
+      <add-task/>
+      <task-progress/>
       <nav class="panel">
-        <p class="panel-heading">
-          Tasks
-        </p>
-        <div class="panel-block">
-          100% tasks complete
-          <progress class="progress is-primary is-large" value="15" max="100">15%</progress>
-
-        </div>
-        <div class="panel-block">
-          <div class="field has-addons">
-            <div class="control">
-              <input
-                class="input is-medium"
-                type="text"
-                placeholder="Enter a task name"
-                @keyup.enter="addTask"
-              >
-            </div>
-            <p class="control">
-              <button
-                class="button is-primary is-medium is-expanded"
-                @click="addTask"
-              >
-                Add
-              </button>
-            </p>
-
-          </div>
-        </div>
-        <label class="panel-block" v-for="(task, i) in tasks" :key="i">
-          <input type="checkbox">
-          {{ task.name }}
-        </label>
-
+        <task
+          v-for="(task, i) in tasks"
+          :key="i"
+          :task="task"
+        />
       </nav>
     </div>
   </section>
 </template>
 
 <script>
-import EnterTask from './EnterTask';
+import AddTask from './AddTask';
 import Task from './Task';
+import TaskProgress from './TaskProgress';
 
 export default {
   name: 'Layout',
+  components: { AddTask, Task, TaskProgress },
   data() {
     return {
       tasks: [
@@ -58,9 +33,6 @@ export default {
         },
       ],
     };
-  },
-  methods: {
-    addTask() {},
   },
 };
 </script>
