@@ -13,9 +13,6 @@ yarn dev
 
 ## run tests
 yarn test
-
-## view storybook
-yarn storybook
 ```
 
 ## build for production
@@ -42,18 +39,11 @@ yarn build --report
 * [x] Webpack
 * [x] Bulma, Sass
 * [x] Vue layout
-* [x] Storybook for Vue
-* [x] story: layout
 * [x] task entry component
-* [x] story: task entry
 * [ ] task component
-* [ ] story: task
 * [ ] task removal component
-* [ ] story: task removal
 * [ ] task complete component
-* [ ] story: task complete
 * [ ] graph component
-* [ ] story: graph (simple CSS rather than chart lib)
 * [ ] base Vuex store
 * [ ] tests for in-memory tasks store
 * [ ] tasks store

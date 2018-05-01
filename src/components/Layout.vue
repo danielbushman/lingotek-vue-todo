@@ -1,35 +1,70 @@
 <template>
   <section class="section">
     <div class="container">
-      <!-- Main container -->
-      <div class="level">
-        <h1 class="title">
-          {{ title }}
-        </h1>
-      </div>
-    </div>
-    <div class="container">
-      <enter-task/>
+      <nav class="panel">
+        <p class="panel-heading">
+          Tasks
+        </p>
+        <div class="panel-block">
+          100% tasks complete
+          <progress class="progress is-primary is-large" value="15" max="100">15%</progress>
+
+        </div>
+        <div class="panel-block">
+          <div class="field has-addons">
+            <div class="control">
+              <input
+                class="input is-medium"
+                type="text"
+                placeholder="Enter a task name"
+                @keyup.enter="addTask"
+              >
+            </div>
+            <p class="control">
+              <button
+                class="button is-primary is-medium is-expanded"
+                @click="addTask"
+              >
+                Add
+              </button>
+            </p>
+
+          </div>
+        </div>
+        <label class="panel-block" v-for="(task, i) in tasks" :key="i">
+          <input type="checkbox">
+          {{ task.name }}
+        </label>
+
+      </nav>
     </div>
   </section>
 </template>
 
 <script>
 import EnterTask from './EnterTask';
+import Task from './Task';
 
 export default {
   name: 'Layout',
-  components: { EnterTask },
   data() {
     return {
-      title: 'todo',
+      tasks: [
+        {
+          name: 'task A',
+        },
+        {
+          name: 'task B',
+        },
+      ],
     };
+  },
+  methods: {
+    addTask() {},
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.title {
-  color: rgb(180, 180, 180);
-}
+
 </style>
