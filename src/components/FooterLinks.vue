@@ -19,6 +19,12 @@
       </a>
       <a
         class="navbar-item"
+        href="https://github.com/danielbushman/lingotek-vue-todo/archive/master.zip"
+      >
+        Download ZIP
+      </a>
+      <a
+        class="navbar-item"
         href="http://lingotek-vue-todo.s3-website-us-east-1.amazonaws.com"
       >
         Live Demo
