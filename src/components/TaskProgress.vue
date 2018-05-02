@@ -9,7 +9,7 @@
         :max="count"
         class="progress is-info is-large"
       >
-        15%
+        {{ percentComplete }}%
       </progress>
     </div>
     <div class="column is-one-fifth is-size-7 has-text-left has-text-grey-light is-hidden-mobile">
