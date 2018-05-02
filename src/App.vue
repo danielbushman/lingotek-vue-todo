@@ -19,6 +19,7 @@
         </div>
       </div>
     </section>
+    <footer-links/>
   </div>
 </template>
 
@@ -29,6 +30,7 @@ import faTimesCircle from '@fortawesome/fontawesome-free-solid/faTimesCircle';
 
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import AddTask from './components/AddTask';
+import FooterLinks from './components/FooterLinks';
 import Task from './components/Task';
 import TaskProgress from './components/TaskProgress';
 import { TOGGLE_TASK, ADD_TASK, REMOVE_TASK } from './store/mutation-types';
@@ -37,7 +39,7 @@ fontawesome.library.add(solid, faTimesCircle);
 
 export default {
   name: 'App',
-  components: { AddTask, Task, TaskProgress },
+  components: { AddTask, FooterLinks, Task, TaskProgress },
   computed: {
     ...mapState(['tasks']),
     ...mapGetters(['count', 'completedCount']),
