@@ -18,13 +18,13 @@
         source on Github
       </a>
       <a
-        class="navbar-item"
+        class="navbar-item is-hidden-mobile"
         href="https://github.com/danielbushman/lingotek-vue-todo/archive/master.zip"
       >
         Download ZIP
       </a>
       <a
-        class="navbar-item"
+        class="navbar-item is-hidden-mobile"
         href="http://lingotek-vue-todo.s3-website-us-east-1.amazonaws.com"
       >
         Live Demo
