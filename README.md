@@ -11,7 +11,7 @@ yarn
 # dev server with hot reload
 yarn dev
 
-## run tests
+# run tests
 yarn test
 ```
 
