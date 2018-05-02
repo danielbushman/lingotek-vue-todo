@@ -11,7 +11,7 @@
     </p>
     <p class="control">
       <button
-        class="button is-light is-medium is-expanded"
+        class="button is-medium is-expanded is-outlined"
         @click="addTask"
       >
         Add
