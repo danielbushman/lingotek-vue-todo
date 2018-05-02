@@ -1,5 +1,7 @@
 # Vue.js Todo app for Lingotek
 
+[Live Demo](http://lingotek-vue-todo.s3-website-us-east-1.amazonaws.com/)
+
 ## Setup local development
 
 Instructions use [Yarn](https://yarnpkg.com/en/) as dependency manager. Use NPM at your own descretion.
