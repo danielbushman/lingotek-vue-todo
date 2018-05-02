@@ -24,11 +24,8 @@
 </template>
 
 <script>
-import FontAwesomeIcon from '@fortawesome/vue-fontawesome';
-
 export default {
   name: 'Task',
-  components: { FontAwesomeIcon },
   props: {
     task: {
       type: Object,
