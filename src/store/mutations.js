@@ -4,7 +4,7 @@ export default {
   [ADD_TASK]: (state, name) => {
     if (name.trim() === '') return;
     const id = btoa(Math.random() * Date.now()).slice(0, 7);
-    state.tasks.push({ id, name, completed: false });
+    state.tasks.unshift({ id, name, completed: false });
   },
   [REMOVE_TASK]: (state, task) => {
     state.tasks.splice(state.tasks.indexOf(task), 1);
