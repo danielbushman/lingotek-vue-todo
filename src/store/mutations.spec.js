@@ -24,11 +24,11 @@ describe('mutations', () => {
     store = new Vuex.Store(cloneDeep(testStore));
   });
 
-  test('ADD_TASK adds a task, given a name', () => {
+  test('ADD_TASK adds a task, given a name, to the begining of the array', () => {
     store.commit(ADD_TASK, 'some task');
-    expect(store.state.tasks[1]).toMatchObject({ name: 'some task' });
-    expect(store.state.tasks[1]).toHaveProperty('id');
-    expect(store.state.tasks[1].completed).toBeFalsy();
+    expect(store.state.tasks[0]).toMatchObject({ name: 'some task' });
+    expect(store.state.tasks[0]).toHaveProperty('id');
+    expect(store.state.tasks[0].completed).toBeFalsy();
   });
 
   test('ADD_TASK with not add an empty string as a task', () => {
