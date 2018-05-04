@@ -11,7 +11,8 @@
     "unit": "jest --config jest.conf.js --coverage --watch",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "dependencies": {
     "vue": "^2.5.2",
@@ -19,9 +20,10 @@
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.15",
+    "@storybook/vue": "^3.4.3",
     "autoprefixer": "^8.4.1",
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.22.1",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-jest": "^21.0.2",
@@ -34,6 +36,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015-ie": "^6.7.0",
     "babel-preset-stage-2": "^6.22.0",
+    "babel-runtime": "^6.26.0",
     "buefy": "^0.6.5",
     "bulma": "^0.7.1",
     "chalk": "^2.0.1",
