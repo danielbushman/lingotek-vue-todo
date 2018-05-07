@@ -17,7 +17,11 @@ stories
     components: { Task },
     data() {
       return {
-        task: { name: text('label', 'Do something'), completed: boolean('completed') },
+        task: {
+          id: text('id', 'SOME-ID'),
+          name: text('label', 'Do something'),
+          completed: boolean('completed'),
+        },
       };
     },
     template: '<task :task="task"/>',
