@@ -19,6 +19,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.3",
     "@storybook/addon-knobs": "^3.4.3",
     "@storybook/addon-options": "^3.4.3",
     "@storybook/addons": "^3.4.3",

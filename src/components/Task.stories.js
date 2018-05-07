@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs/vue';
+import { action } from '@storybook/addon-actions';
 
 import Task from './Task';
 
@@ -29,4 +30,12 @@ stories
       };
     },
     template: '<div class="panel"><task v-for="(task, i) in tasks" :task="task" :key="i"/></div>',
+  }))
+  .add('with actions', () => ({
+    components: { Task },
+    template: '<task @toggle="toggle" @remove="remove"/>',
+    methods: {
+      toggle: action('toggle'),
+      remove: action('remove'),
+    },
   }));
