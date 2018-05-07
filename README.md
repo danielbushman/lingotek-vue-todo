@@ -13,6 +13,9 @@ yarn dev
 
 # run tests
 yarn test
+
+# launch storybook
+yarn storybook
 ```
 
 ## build for production
