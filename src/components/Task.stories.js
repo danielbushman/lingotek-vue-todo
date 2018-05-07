@@ -1,31 +1,27 @@
 import { storiesOf } from '@storybook/vue';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs/vue';
 
 import Task from './Task';
 
-storiesOf('Task', module)
+const stories = storiesOf('Task', module);
+
+stories.addDecorator(withKnobs);
+
+stories
   .add('without props', () => ({
     components: { Task },
     template: '<task/>',
   }))
-  .add('with a name', () => ({
+  .add('with knobs', () => ({
     components: { Task },
     data() {
       return {
-        task: { name: 'Do something' },
+        task: { name: text('label', 'Do something'), completed: boolean('completed') },
       };
     },
     template: '<task :task="task"/>',
   }))
-  .add('completed', () => ({
-    components: { Task },
-    data() {
-      return {
-        task: { completed: true },
-      };
-    },
-    template: '<task :task="task"/>',
-  }))
-  .add('listed', () => ({
+  .add('listed in panel', () => ({
     components: { Task },
     data() {
       return {
