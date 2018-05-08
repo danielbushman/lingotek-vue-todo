@@ -13,7 +13,7 @@ stories
     components: { Task },
     template: '<task/>',
   }))
-  .add('with knobs', () => ({
+  .add('with knobs and actions', () => ({
     components: { Task },
     data() {
       return {
@@ -24,9 +24,13 @@ stories
         },
       };
     },
-    template: '<task :task="task"/>',
+    methods: {
+      toggle: action('toggle'),
+      remove: action('remove'),
+    },
+    template: '<task :task="task" @toggle="toggle" @remove="remove"/>',
   }))
-  .add('listed in panel', () => ({
+  .add('listed in a panel', () => ({
     components: { Task },
     data() {
       return {
@@ -34,12 +38,4 @@ stories
       };
     },
     template: '<div class="panel"><task v-for="(task, i) in tasks" :task="task" :key="i"/></div>',
-  }))
-  .add('with actions', () => ({
-    components: { Task },
-    template: '<task @toggle="toggle" @remove="remove"/>',
-    methods: {
-      toggle: action('toggle'),
-      remove: action('remove'),
-    },
   }));
