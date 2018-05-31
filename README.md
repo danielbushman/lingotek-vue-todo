@@ -35,6 +35,6 @@ yarn build --report
 
 ## TODO
 
-* [ ] storybook
 * [ ] i18n/l10n foundation
+* [x] storybook
 * [ ] vuex-persist
