@@ -29,7 +29,8 @@ npm run build --report
 
 - [ ] Add standard ltk-components-vue
 - [ ] i18n/l10n foundation
-- [ ] Add side nav items
+- [ ] Add sidebar nav items
+- [ ] Add top nav items
 - [ ] Remove Bulma and add Vuetify
 - [ ] Add breadcrumbs using Vuetify
 
@@ -78,4 +79,4 @@ npm run build --report
 
 ## Proposed TODOs
 
-- [ ] vuex-persist to avoid lost work
+- [ ] vuex-persist to avoid lost work and keep sorting options
