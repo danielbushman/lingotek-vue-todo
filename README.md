@@ -1,40 +1,81 @@
-# Vue.js starter
+# Quality Manager
+
+This is a rewrite of the [Quality Manger App](https://bitbucket.org/lingotek/quality-manager-app/src/master/) into Vue.js.
 
 ## Setup local development
 
-Instructions use [Yarn](https://yarnpkg.com/en/) as dependency manager. Use NPM at your own descretion.
-
 ```bash
 # install
-yarn
+npm i
 
 # dev server with hot reload
-yarn dev
+npm run dev
 
 # run tests
-yarn test
+npm run test
 
 # launch storybook
-yarn storybook
+npm run storybook
 ```
 
 ## build for production
 
 ```bash
 # build and view bundle analyzer report
-yarn build --report
+npm run build --report
 ```
-
-## High-level goals
-
-* Vue.js project starter
-* For single-page apps (SPAs)
-* For progressive web apps (PWAs)
-* Going beyond "hello world" to demonstrate included functionality
-* Elements necessary for a large scale production app
 
 ## TODO
 
-* [ ] i18n/l10n foundation
-* [x] storybook
-* [ ] vuex-persist
+- [ ] Add standard ltk-components-vue
+- [ ] i18n/l10n foundation
+- [ ] Add side nav items
+- [ ] Remove Bulma and add Vuetify
+- [ ] Add breadcrumbs using Vuetify
+
+### List
+
+- [ ] List Quality Programs
+- [ ] List sorting
+- [ ] List item actions
+- [ ] Search (filter) programs in list
+- [ ] "Created By" column filter
+- [ ] List Pagination
+
+### Base and Details
+
+- [ ] View details
+- [ ] Edit details
+- [ ] Save/Cancel actions (use with existing to avoid validation errors)
+- [ ] Publish/Unpublish actions
+- [ ] Stepper
+
+### Categories
+
+- [ ] View error types and categories
+- [ ] Base edit view
+- [ ] Find error types
+- [ ] Add/remove/rename categories
+- [ ] Drag and drop organizing
+
+### Severities
+
+- [ ] View severities
+- [ ] add/remove/rename severities
+- [ ] sort severities
+
+### Scoring
+
+- [ ] UX prototype
+- [ ] View/Edit algorithm options
+- [ ] Add/edit/remove scorecards
+- [ ] Metadata field auto-completion
+
+### Settings
+
+- [ ] View Permissions
+- [ ] Edit assigned groups/users
+
+## Proposed TODOs
+
+- [ ] vuex-persist to avoid lost work
