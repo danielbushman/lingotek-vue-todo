@@ -1,0 +1,62 @@
+.material-menu-container {
+  margin-right: 8px;
+  .material-menu-toggle {
+    cursor: pointer;
+		min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      color: rgba(255,255,255,0.87);
+    }
+  }
+  .material-menu {
+    background: white;
+    position: fixed;
+    z-index: 99999;
+    width: 160px;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    transform-origin: right top 0px;
+    transform:scale(.1);
+    transition: all .2s cubic-bezier(.25,.8,.25,1);
+    opacity: 0;
+    pointer-events: none;
+    .material-menu-option {
+      cursor:pointer;
+      opacity: 0;
+      height: 48px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+      padding-right: 16px;
+      i {
+        margin-right: 16px;
+        opacity: .56;
+      }
+      &:hover {
+        background: #e0e0e0;
+      }
+    }
+  }
+  .active {
+    pointer-events: auto;
+    pointer-events: initial;
+    opacity: 1;
+    transform:scale(1);
+    .material-menu-option {
+      opacity: 1;
+      transition: 0ms;
+      transition-delay: 0ms;
+      transition-duration: 0ms;
+    }
+  }
+  .v-menu-mask {
+    z-index: 99998;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}

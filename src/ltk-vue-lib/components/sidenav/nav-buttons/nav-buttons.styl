@@ -1,0 +1,66 @@
+.button-container {
+  $text-color = rgba(black, .54);
+  color: $text-color;
+  color: var(--font-color);
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  &.active {
+    background: #e0e0e0;
+  }
+  &:hover {
+    background: #e0e0e0;
+  }
+  &.current-page {
+    background: #e0e0e0;
+  }
+  .side-nav-button {
+    width:56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: none;
+    background: transparent;
+    text-decoration: none;
+    color: rgba(white, .62);
+    color: var(--font-color);
+    &:hover {
+      color: var(--font-color);
+    }
+    div {
+      transition: all .4s cubic-bezier(.25,.8,.25,1);
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: .54;
+      &.flipped {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .button-label {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 16px;
+    color:currentcolor;
+  }
+  .subnav-indicator {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0px;
+    right: -2px;
+    i {
+      font-size: 20px;
+      transform: rotate(90deg);
+      color: currentcolor;
+    }
+  }
+}

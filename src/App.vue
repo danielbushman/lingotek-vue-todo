@@ -1,53 +1,69 @@
 <template>
-  <div id="app">
-    <section class="section">
-      <div class="container">
-        <add-task @addTask="addTask"/>
-        <task-progress
-          v-if="count > 0"
-          :completed-count="completedCount"
-          :count="count"
-        />
-        <div class="panel">
-          <task
-            v-for="task in tasks"
-            :key="task.id"
-            :task="task"
-            @toggle="toggle"
-            @remove="remove"
-          />
-        </div>
-      </div>
-    </section>
-    <footer-links/>
-  </div>
+  <v-app>
+    <v-navigation-drawer
+      app
+      clipped
+      fixed
+      class="elevation-1"
+    >
+      <side-nav/>
+    </v-navigation-drawer>
+    <v-toolbar
+      app
+      fixed
+      clipped-left
+      height="56px"
+    >
+      <app-bar/>
+    </v-toolbar>
+    <v-content>
+      <v-container
+        fluid
+        fill-height
+        justify-start
+      >
+        <v-layout
+          align-start
+        >
+          <v-flex
+            shrink
+          >
+            <app-body/>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import { mapState, mapGetters, mapMutations } from 'vuex';
-import AddTask from './components/AddTask';
-import FooterLinks from './components/FooterLinks';
-import Task from './components/Task';
-import TaskProgress from './components/TaskProgress';
-import { TOGGLE_TASK, ADD_TASK, REMOVE_TASK } from './store/mutation-types';
+import AppBar from '@/ltk-vue-lib/components/appbar';
+import SideNav from '@/ltk-vue-lib/components/sidenav';
+import AppBody from '@/components/AppBody';
 
 export default {
   name: 'App',
-  components: { AddTask, FooterLinks, Task, TaskProgress },
-  computed: {
-    ...mapState(['tasks']),
-    ...mapGetters(['count', 'completedCount']),
-  },
-  methods: {
-    ...mapMutations({
-      toggle: TOGGLE_TASK,
-      remove: REMOVE_TASK,
-      addTask: ADD_TASK,
-    }),
+  components: {
+    AppBar,
+    SideNav,
+    AppBody,
   },
 };
 </script>
 
-<style lang="scss">
-@import '../node_modules/bulma/bulma.sass';
+<style lang="stylus">
+// not scoped
+@import '~vuetify/src/stylus/main'; // Ensure you are using stylus-loader
+
+.debug {
+  border: 2px dotted blue;
+}
+
+.debugg {
+  border: 2px dotted red;
+}
+
+.debuggg {
+  border: 2px dotted green;
+}
 </style>
