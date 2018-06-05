@@ -14,4 +14,4 @@ node_modules/
 *.sln
 
 # use this for any local files you want ignored, such as `experiment._ignored.js`
-*._ignored.*
+*._ignored*
