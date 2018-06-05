@@ -1,9 +1,8 @@
 .DS_Store
 node_modules/
 /dist/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+*-debug.log*
+*-error.log*
 /test/coverage/
 
 # Editor directories and files
@@ -14,5 +13,5 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-# use this for any files you want ignored, such as experiment._ignored.js
+# use this for any local files you want ignored, such as `experiment._ignored.js`
 *._ignored.*
