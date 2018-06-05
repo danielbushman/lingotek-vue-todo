@@ -27,10 +27,16 @@ npm run build --report
 
 ## TODO
 
-- [ ] Add standard ltk-components-vue
-- [ ] i18n/l10n foundation
+### App
+
+- [ ] Start ltk-vue-lib
+- [ ] Create ltk-vue-lib/plugins/i18n
+- [ ] Create ltk-vue-lib/components/sidenav
 - [ ] Add sidebar nav items
-- [ ] Add top nav items
+- [ ] Create ltk-vue-lib/components/appbar
+- [ ] Create ltk-vue-lib/store/user-info
+- [ ] Add appbar items
+- [ ] Move ltk-vue-lib to it's own repo
 - [ ] Remove Bulma and add Vuetify
 - [ ] Add breadcrumbs using Vuetify
 
@@ -76,7 +82,3 @@ npm run build --report
 
 - [ ] View Permissions
 - [ ] Edit assigned groups/users
-
-## Proposed TODOs
-
-- [ ] vuex-persist to avoid lost work and keep sorting options
