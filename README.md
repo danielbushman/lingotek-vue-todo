@@ -29,15 +29,15 @@ npm run build --report
 
 ### App
 
-- [ ] Start ltk-vue-lib folder locally
-- [ ] HARD CODE lt-vue-lib/plugins/ltk-environment
+- [x] Remove Bulma and add Vuetify
+- [x] Re-organize project
+- [x] Start ltk-vue-lib folder locally
 - [ ] Create ltk-vue-lib/plugins/l10n using Polyglot.js
 - [ ] Create ltk-vue-lib/components/sidenav
 - [ ] HARD CODE sidebar nav items
 - [ ] Create ltk-vue-lib/components/appbar
 - [ ] HARD CODE ltk-vue-lib/store/user-info
 - [ ] HARD CODE appbar items
-- [ ] Remove Bulma and add Vuetify
 - [ ] Add breadcrumbs using Vuetify
 
 ### List
@@ -115,6 +115,7 @@ npm run build --report
 
 ### Deploy
 
+- [ ] HARD CODE lt-vue-lib/plugins/ltk-environment
 - [ ] Move node-app-server to folder in this repo
 - [ ] Integrate node-app-server for use with webpack
 - [ ] Finish ltk-vue-lib/plugins/ltk-environment
