@@ -19,8 +19,8 @@ export default {
   data() {
     return {
       items: [
-        { text: this.$t('programs.collectionName') },
-        { text: this.$t('programs.list') },
+        { text: this.$t('breadcrumbs.qualityPrograms') },
+        { text: this.$t('breadcrumbs.list') },
       ],
     };
   },

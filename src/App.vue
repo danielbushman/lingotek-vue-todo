@@ -6,7 +6,7 @@
       fixed
       class="elevation-1"
     >
-      <side-nav/>
+      <side-nav :navigation="sidebar.navigation"/>
     </v-navigation-drawer>
     <v-toolbar
       app
@@ -47,6 +47,24 @@ export default {
     AppBar,
     SideNav,
     AppBody,
+  },
+  data() {
+    return {
+      sidebar: {
+        navigation: [
+          {
+            icon: 'dvr',
+            route: 'list',
+            name: this.$t('sidebar.qualityPrograms'),
+          },
+          {
+            icon: 'settings',
+            route: 'settings',
+            name: this.$t('sidebar.settings'),
+          },
+        ],
+      },
+    };
   },
 };
 </script>

@@ -1,14 +1,21 @@
 export default {
   'en-US': {
-    programs: {
+    breadcrumbs: {
+      qualityPrograms: 'quality programs',
       list: 'list',
-      collectionName: 'quality programs',
+    },
+    sidebar: {
+      qualityPrograms: 'quality programs',
+      settings: 'settings',
     },
   },
   'en-CA': {
-    programs: {
+    breadcrumbs: {
+      qualityPrograms: 'quality programs, eh?',
       list: 'list, eh?',
-      collectionName: 'quality programs, eh?',
+    },
+    sidebar: {
+      qualityPrograms: 'quality programs, eh?',
     },
   },
 };

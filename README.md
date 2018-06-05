@@ -33,8 +33,8 @@ npm run build --report
 - [x] Re-organize project
 - [x] Start ltk-vue-lib folder locally
 - [x] Add vue-i18n
-- [ ] Create ltk-vue-lib/components/sidenav
-- [ ] HARD CODE sidebar nav items
+- [x] Create ltk-vue-lib/components/sidenav
+- [x] HARD CODE sidebar nav items
 - [ ] Create ltk-vue-lib/components/appbar
 - [ ] HARD CODE ltk-vue-lib/store/user-info
 - [ ] HARD CODE appbar items
