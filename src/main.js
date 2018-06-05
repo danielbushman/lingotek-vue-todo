@@ -1,19 +1,22 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import VueI18n from 'vue-i18n';
 import Vuetify from 'vuetify';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 
 import App from '@/App';
 import store from '@/store';
-import Localization from '@/ltk-vue-lib/plugins/Localization';
-import languages from '@/languages.json';
+import messages from '@/languages';
 
 // Plugins
 Vue.use(Vuex);
 Vue.use(Vuetify);
-Vue.use(Localization, store);
+Vue.use(VueI18n);
 
-Vue.l10n(languages);
+const i18n = new VueI18n({
+  locale: 'en-CA',
+  messages,
+});
 
 Vue.config.productionTip = false;
 
@@ -24,5 +27,6 @@ new Vue({
     App,
   },
   store,
+  i18n,
   template: '<App/>',
 });

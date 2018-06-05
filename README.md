@@ -32,7 +32,7 @@ npm run build --report
 - [x] Remove Bulma and add Vuetify
 - [x] Re-organize project
 - [x] Start ltk-vue-lib folder locally
-- [x] Create ltk-vue-lib/plugins/l10n using Polyglot.js
+- [x] Add vue-i18n
 - [ ] Create ltk-vue-lib/components/sidenav
 - [ ] HARD CODE sidebar nav items
 - [ ] Create ltk-vue-lib/components/appbar
