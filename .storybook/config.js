@@ -1,8 +1,12 @@
-import { configure, addDecorator } from '@storybook/vue';
-import { setOptions } from '@storybook/addon-options';
+import {
+  configure,
+  addDecorator
+} from '@storybook/vue';
+import {
+  setOptions
+} from '@storybook/addon-options';
 
 import Vue from 'vue';
-import '../node_modules/bulma/css/bulma.min.css';
 
 // Option defaults:
 setOptions({
@@ -10,12 +14,12 @@ setOptions({
    * name to display in the top left corner
    * @type {String}
    */
-  name: 'Vue TODO',
+  name: 'Quality Management',
   /**
    * URL for name in top left corner to link to
    * @type {String}
    */
-  url: 'https://github.com/danielbushman',
+  url: '/',
   /**
    * show story component as full screen
    * @type {Boolean}
