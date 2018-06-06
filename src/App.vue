@@ -4,9 +4,13 @@
       app
       clipped
       fixed
+      width="auto"
       class="elevation-1"
     >
-      <side-nav :navigation="sidebar.navigation"/>
+      <side-nav
+        :navigation="sidenav.navigation"
+        @sidenav-toggled="toggleSideNav"
+      />
     </v-navigation-drawer>
     <v-toolbar
       app
@@ -18,6 +22,7 @@
     </v-toolbar>
     <v-content>
       <v-container
+        :class="{ 'sidenav-expanded': sidenav.expanded }"
         fluid
         fill-height
         justify-start
@@ -51,6 +56,7 @@ export default {
   data() {
     return {
       sidebar: {
+        expanded: true,
         navigation: [
           {
             icon: 'dvr',
@@ -66,12 +72,25 @@ export default {
       },
     };
   },
+  methods: {
+    toggleSideNav(expanded) {
+      this.sidenav.expanded = expanded;
+    },
+  },
 };
 </script>
 
 <style lang="stylus">
 // not scoped
 @import '~vuetify/src/stylus/main'; // Ensure you are using stylus-loader
+
+.container {
+  margin-left: 59px;
+
+  &.sidenav-expanded {
+    margin-left: 240px;
+  }
+}
 
 .debug {
   border: 2px dotted blue;

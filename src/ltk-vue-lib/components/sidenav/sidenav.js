@@ -46,12 +46,14 @@ export default {
         subnav.offsetHeight = subnav.offsetHeight; // forces css reflow
         subnav.style.transition = '0ms';
       }
+      this.$emit('sidenav-toggled', this.expanded);
       window.setTimeout(() => {
         if (this.showSubnav) subnav.style.zIndex = 52;
       }, 200);
     },
     expand() {
       this.expanded = !this.expanded;
+      this.$emit('sidenav-toggled', this.expanded);
       localStorage.setItem('side-nav-expanded', this.expanded);
     },
   },
