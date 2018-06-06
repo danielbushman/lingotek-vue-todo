@@ -97,10 +97,10 @@ export default {
 }
 
 .debugg {
-  border: 2px dotted red;
+  border: 3px dotted red;
 }
 
 .debuggg {
-  border: 2px dotted green;
+  border: 4px dotted green;
 }
 </style>
