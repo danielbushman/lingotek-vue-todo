@@ -55,18 +55,18 @@ export default {
   },
   data() {
     return {
-      sidebar: {
+      sidenav: {
         expanded: true,
         navigation: [
           {
             icon: 'dvr',
             route: 'list',
-            name: this.$t('sidebar.qualityPrograms'),
+            name: this.$t('sidenav.qualityPrograms'),
           },
           {
             icon: 'settings',
             route: 'settings',
-            name: this.$t('sidebar.settings'),
+            name: this.$t('sidenav.settings'),
           },
         ],
       },

@@ -4,7 +4,7 @@ export default {
       qualityPrograms: 'quality programs',
       list: 'list',
     },
-    sidebar: {
+    sidenav: {
       qualityPrograms: 'quality programs',
       settings: 'settings',
     },
@@ -14,7 +14,7 @@ export default {
       qualityPrograms: 'quality programs, eh?',
       list: 'list, eh?',
     },
-    sidebar: {
+    sidenav: {
       qualityPrograms: 'quality programs, eh?',
     },
   },
