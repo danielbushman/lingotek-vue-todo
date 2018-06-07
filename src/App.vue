@@ -1,25 +1,8 @@
 <template>
   <v-app>
-    <v-content>
-      <v-container
-        :class="{ 'sidenav-expanded': sidenav.expanded }"
-        fluid
-        fill-height
-        justify-start
-      >
-        <v-layout
-          align-start
-        >
-          <v-flex
-            shrink
-          >
-            <app-body/>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-content>
     <side-drawer @toggled="drawerToggled"/>
     <top-menu/>
+    <app-body :drawer-open="drawerOpen"/>
   </v-app>
 </template>
 
@@ -48,27 +31,6 @@ export default {
 };
 </script>
 
-<style lang="stylus">
-// not scoped
-@import '~vuetify/src/stylus/main'; // Ensure you are using stylus-loader
-
-.container {
-  margin-left: 59px;
-
-  &.sidenav-expanded {
-    margin-left: 240px;
-  }
-}
-
-.debug {
-  border: 2px dotted blue;
-}
-
-.debugg {
-  border: 3px dotted red;
-}
-
-.debuggg {
-  border: 4px dotted green;
-}
+<style lang="stylus" scoped>
+@import '~vuetify/src/stylus/main'; // import for all contexts using vuetify
 </style>
