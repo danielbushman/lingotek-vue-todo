@@ -36,6 +36,7 @@ npm run build --report
 - [x] Create ltk-vue-lib/components/sidenav
 - [x] HARD CODE sidenav nav items
 - [x] setup vue-router for sidenav
+- [x] make sidenav a pure component
 - [ ] Create ltk-vue-lib/components/appbar
 - [ ] HARD CODE ltk-vue-lib/store/user-info
 - [ ] HARD CODE appbar items

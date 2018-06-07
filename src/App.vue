@@ -1,17 +1,5 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      app
-      clipped
-      fixed
-      width="auto"
-      class="elevation-1"
-    >
-      <side-nav
-        :navigation="sidenav.navigation"
-        @sidenav-toggled="toggleSideNav"
-      />
-    </v-navigation-drawer>
     <v-toolbar
       app
       fixed
@@ -38,43 +26,30 @@
         </v-layout>
       </v-container>
     </v-content>
+    <side-drawer @toggled="drawerToggled"/>
   </v-app>
 </template>
 
 <script>
 import AppBar from '@/ltk-vue-lib/components/appbar';
-import SideNav from '@/ltk-vue-lib/components/sidenav';
+import SideDrawer from '@/components/navigation/SideDrawer';
 import AppBody from '@/components/AppBody';
 
 export default {
   name: 'App',
   components: {
     AppBar,
-    SideNav,
+    SideDrawer,
     AppBody,
   },
   data() {
     return {
-      sidenav: {
-        expanded: true,
-        navigation: [
-          {
-            icon: 'dvr',
-            route: 'list',
-            name: this.$t('sidenav.qualityPrograms'),
-          },
-          {
-            icon: 'settings',
-            route: 'settings',
-            name: this.$t('sidenav.settings'),
-          },
-        ],
-      },
+      drawerOpen: true,
     };
   },
   methods: {
-    toggleSideNav(expanded) {
-      this.sidenav.expanded = expanded;
+    drawerToggled(expanded) {
+      this.drawerOpen = expanded;
     },
   },
 };
