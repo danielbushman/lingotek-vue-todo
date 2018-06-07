@@ -30,6 +30,51 @@
         <div class="username organization">{{organization.name}}</div>
       </div>
     </material-menu>
+    <v-container class="ma-0 pa-0">
+      <v-layout row>
+        <v-flex shrink>
+          <v-chip color="grey" text-color="white">
+            <v-avatar>
+              <v-icon>phone_iphone</v-icon>
+            </v-avatar>
+            xs
+          </v-chip>
+        </v-flex>
+        <v-flex shrink hidden-xs-only>
+          <v-chip color="grey" text-color="white">
+            <v-avatar>
+              <v-icon>tablet</v-icon>
+            </v-avatar>
+            sm
+          </v-chip>
+        </v-flex>
+        <v-flex shrink hidden-sm-and-down>
+          <v-chip color="grey" text-color="white">
+            <v-avatar>
+              <v-icon>laptop</v-icon>
+            </v-avatar>
+            md
+          </v-chip>
+        </v-flex>
+        <v-flex shrink hidden-md-and-down>
+          <v-chip color="grey" text-color="white">
+            <v-avatar>
+              <v-icon>desktop_windows</v-icon>
+            </v-avatar>
+            lg
+          </v-chip>
+        </v-flex>
+        <v-flex shrink hidden-lg-and-down>
+          <v-chip color="grey" text-color="white">
+            <v-avatar>
+              <v-icon>tv</v-icon>
+            </v-avatar>
+            xl
+          </v-chip>
+        </v-flex>
+      </v-layout>
+    </v-container>
+
   </div>
 </template>
 <script src="./appbar.js"></script>

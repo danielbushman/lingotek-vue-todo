@@ -1,13 +1,5 @@
 <template>
   <v-app>
-    <v-toolbar
-      app
-      fixed
-      clipped-left
-      height="56px"
-    >
-      <app-bar/>
-    </v-toolbar>
     <v-content>
       <v-container
         :class="{ 'sidenav-expanded': sidenav.expanded }"
@@ -27,18 +19,19 @@
       </v-container>
     </v-content>
     <side-drawer @toggled="drawerToggled"/>
+    <top-menu/>
   </v-app>
 </template>
 
 <script>
-import AppBar from '@/ltk-vue-lib/components/appbar';
+import TopMenu from '@/components/navigation/TopMenu';
 import SideDrawer from '@/components/navigation/SideDrawer';
 import AppBody from '@/components/AppBody';
 
 export default {
   name: 'App',
   components: {
-    AppBar,
+    TopMenu,
     SideDrawer,
     AppBody,
   },
