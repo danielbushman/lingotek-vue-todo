@@ -3,6 +3,7 @@ export default {
     breadcrumbs: {
       qualityPrograms: 'quality programs',
       list: 'list',
+      new: 'new',
     },
     sidenav: {
       qualityPrograms: 'quality programs',
@@ -16,6 +17,11 @@ export default {
     },
     sidenav: {
       qualityPrograms: 'quality programs, eh?',
+    },
+  },
+  'jp-JP': {
+    sidenav: {
+      qualityPrograms: '質の高いプログラム',
     },
   },
 };
