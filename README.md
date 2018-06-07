@@ -40,7 +40,7 @@ npm run build --report
 - [ ] Create ltk-vue-lib/components/appbar
 - [ ] HARD CODE ltk-vue-lib/store/user-info
 - [ ] HARD CODE appbar items
-- [ ] Add breadcrumbs using Vuetify
+- [x] Add breadcrumbs using Vuetify
 
 ### List
 
