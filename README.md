@@ -41,6 +41,7 @@ npm run build --report
 - [ ] HARD CODE ltk-vue-lib/store/user-info
 - [ ] HARD CODE appbar items
 - [x] Add breadcrumbs using Vuetify
+- [x] Fix drawer to accept click for entire row
 
 ### List
 

@@ -1,19 +1,19 @@
 <template>
   <div class="buttons-container">
-    <div class="width-100 f-row f-start button-container" v-for="(item, i) of items" :key="i">
-      <router-link class="side-nav-button" v-if="item.icon !== 'assignment_turned_in'" :to="item.route">
+    <router-link class="width-100 f-row f-start button-container" v-for="(item, i) of items" :key="i" :to="item.route">
+      <div class="side-nav-button" v-if="item.icon !== 'assignment_turned_in'">
         <v-tooltip right :disabled="expanded" open-delay="1000">
           <i slot="activator" class="material-icons the-icon">{{item.icon}}</i>
           <span class="item-name">{{item.name}}</span>
         </v-tooltip>
-      </router-link>
-      <router-link class="f-row f-center-cross button-label item-name" :class="{ expanded }" :to="item.route">
+      </div>
+      <div class="f-row f-center-cross button-label item-name" :class="{ expanded }" :to="item.route">
         {{item.name}}
-      </router-link>
+      </div>
       <div v-if="item.subnav" class="subnav-indicator">
         <i class="material-icons">arrow_drop_up</i>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -35,6 +35,10 @@ export default {
 <style lang="stylus" scoped>
 .item-name {
   text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
 }
 
 .button-container {
