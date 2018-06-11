@@ -10,7 +10,7 @@
       <v-layout class="with-sidenav">
         <v-flex>
           <div class="app-body">
-            <router-view></router-view>
+            <router-view/>
           </div>
         </v-flex>
       </v-layout>
@@ -25,7 +25,7 @@ export default {
     drawerOpen: {
       type: Boolean,
       default: () => true,
-    }
+    },
   },
   data() {
     return {

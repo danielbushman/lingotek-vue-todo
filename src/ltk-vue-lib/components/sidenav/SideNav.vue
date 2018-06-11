@@ -38,7 +38,7 @@ export default {
     allowExpand: {
       type: Boolean,
       default: () => true,
-    }
+    },
   },
   data() {
     return {
@@ -88,7 +88,7 @@ export default {
     }
   },
   mounted() {
-    this.userDidExpand = localStorage.getItem('quality-user-expanded-sidenav') || this.userDidExpand;
+    this.userDidExpand = localStorage.getItem('quality-user-expanded-sidenav') === "true" || this.userDidExpand;
     console.log('this.userDidExpand', this.userDidExpand);
   },
 };
@@ -118,6 +118,7 @@ $hover-background = $active-background;
     display: flex;
     flex-direction: column;
     transition: $transition;
+    align-content: center;
 
     &.side-nav-expanded {
       width: $expanded-width;

@@ -1,13 +1,37 @@
 export default {
   'en-US': {
     breadcrumbs: {
-      qualityPrograms: 'quality programs',
-      list: 'list',
-      new: 'new',
+      qualityPrograms: 'Quality Programs',
+      new: 'New',
+      edit: 'Edit',
+      list: 'List',
     },
     sidenav: {
-      qualityPrograms: 'quality programs',
-      settings: 'settings',
+      qualityPrograms: 'Quality Programs',
+      settings: 'Settings',
+    },
+    buttons: {
+      next: 'Next',
+      save: 'Save',
+    },
+    editQualityProgram: {
+      createAQualityProgram: 'Create a Quality Program',
+      saved: 'Saved',
+      publish: 'Publish',
+      unpublish: 'Unpublish',
+      categories: 'Categories',
+      errorCategories: 'Error Categories',
+      severities: 'Severities',
+      scoring: 'Scoring',
+    },
+    'list-quality-programs': {
+      'action-menu': {
+        view: 'View',
+        edit: 'Edit',
+        publish: 'Publish',
+        unpublish: 'Unpublish',
+        'create-duplicate': 'Create duplicate',
+      },
     },
   },
   'en-CA': {

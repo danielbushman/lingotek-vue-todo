@@ -16,6 +16,7 @@ module.exports = (baseConfig, env, defaultConfig) => {
     alias: {
       '@': resolve('src'),
       vue: 'vue/dist/vue.js',
+      '~': resolve('node_modules/'),
     }
   };
   return defaultConfig;

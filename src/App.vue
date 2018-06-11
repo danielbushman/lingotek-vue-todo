@@ -23,6 +23,9 @@ export default {
       drawerOpen: true,
     };
   },
+  mounted() {
+    this.drawerOpen = this.drawerOpen && this.$vuetify.breakpoint.mdAndUp;
+  },
   methods: {
     drawerToggled(expanded) {
       this.drawerOpen = expanded;

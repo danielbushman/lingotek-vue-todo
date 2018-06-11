@@ -8,7 +8,7 @@
   >
     <side-nav
       :navigation="navigation"
-      :allowExpand="allowSideNavExpand"
+      :allow-expand="allowSideNavExpand"
       @sidenav-toggled="sideNavToggled"
     />
   </v-navigation-drawer>
@@ -28,12 +28,12 @@ export default {
       navigation: [
         {
           icon: 'dvr',
-          route: 'list',
+          route: '/quality/programs',
           name: this.$t('sidenav.qualityPrograms'),
         },
         {
           icon: 'settings',
-          route: 'settings',
+          route: '/quality/settings',
           name: this.$t('sidenav.settings'),
         },
       ],
@@ -49,15 +49,15 @@ export default {
   },
   watch: {
     sideNavExpanded(value) {
-      this.$emit('toggled', this.sideNavExpanded);
-    }
+      this.$emit('toggled', this.sideNavExpanded, value);
+    },
   },
   methods: {
     sideNavToggled(expanded) {
       this.sideNavToggledOn = expanded;
     },
   },
-}
+};
 </script>
 
 <style lang="stylus" scoped>

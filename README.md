@@ -45,15 +45,15 @@ npm run build --report
 
 ### List
 
-- [ ] tests for store module
-- [ ] HARD CODE actions
-- [ ] write mutations and getters
-- [ ] List Quality Programs
-- [ ] List sorting
+- [x] tests for store getters
+- [x] HARD CODE actions
+- [x] write mutations and getters
+- [x] List Quality Programs
+- [x] List sorting
 - [ ] List item actions
-- [ ] Search (filter) programs in list
+- [x] Search (filter) programs in list
 - [ ] "Created By" column filter
-- [ ] List Pagination
+- [x] List Pagination, visible on >10 items
 - [ ] Move generic components ltk-vue-lib/components
 - [ ] Finalize .stories
 

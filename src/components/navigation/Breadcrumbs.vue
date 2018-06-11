@@ -15,14 +15,14 @@
 
 <script>
 export default {
-  name: "Breadcrumbs",
+  name: 'Breadcrumbs',
   props: {
     items: {
       type: Array,
       default: () => [],
     },
   },
-}
+};
 </script>
 
 <style lang="stylus" scoped>
